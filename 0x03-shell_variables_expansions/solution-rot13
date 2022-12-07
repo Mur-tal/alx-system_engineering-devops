@@ -1,4 +1,9 @@
-ROT13 is a variation of the caesar chiffre. It replaces each letter with the letter 13 positions after that letter. A nice side effect: you need only a function to encrypt a string. If you encrypt an encrypted string, you’ll get the plaintext.
+ROT13 is a variation of the caesar chiffre. It replaces 
+each letter with the letter 13 positions after that letter. 
+A nice side effect: you need only a function to encrypt 
+a string. If you encrypt an encrypted string, you’ll get 
+the plaintext.
+
 
 Encryption:
 echo 'This is a Test' | tr 'A-Za-z' 'N-ZA-Mn-za-m'
@@ -7,3 +12,6 @@ Output: Guvf vf n Grfg
 Decryption:
 echo 'Guvf vf n Grfg' | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 Output: This is a Test
+
+Copied from
+https://evilshit.wordpress.com/2012/06/28/how-to-encrypt-a-string-with-rot13-one-liner/
