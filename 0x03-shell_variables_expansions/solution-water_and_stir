@@ -1,0 +1,41 @@
+https://medium.com/@LisaLeung2/behlnort-explained-8ad6d121c9f4
+
+The Problem
+Write a shell script that adds the two numbers stored in the environment variables WATER and STIR and prints the result.
+
+WATER is in base water
+STIR is in base stir.
+The result should be in base behlnort
+export WATER="ewwatratewa"
+export STIR="ti.itirtrtr"
+The Solution
+Translate Water
+
+$WATER | tr water 01234
+
+Note that all ‘w’s are placed with zero and so forth
+ewwatratewa 30012402303
+Convert the output (30012402303) to base-5
+
+$((5#30012402303)) → 29419078
+
+Translate Stir
+
+tr stir. 01234
+
+ti.itirtrtr" 12421231313
+Convert the output (12421231313) to base-5
+
+echo $((5#12421231313)) → 15414583
+
+Add Water and Stir.
+
+29419078 + 15414583 = 44834284
+
+Convert to base of behlnort : which is a base 8
+
+printf “%o” 44834284 → 253016754
+
+253016754 | tr 01234567 belhnort → <insert some code school name>
+
+
