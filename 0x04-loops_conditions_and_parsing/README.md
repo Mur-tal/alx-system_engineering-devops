@@ -1,17 +1,20 @@
 # 0x04. Loops, conditions and parsing
 ### DevOps Shell Bash Scripting
 ## Resources
+
 <details>
+
 <summary><b>Read or watch:</b></summary>
-* [Loops sample](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_01.html)
-* [Variable assignment and arithmetic](https://tldp.org/LDP/abs/html/ops.html)
-* [Comparison operators](https://tldp.org/LDP/abs/html/comparison-ops.html)
-* [File test operators](https://tldp.org/LDP/abs/html/fto.html)
-* [Make your scripts portable](https://www.cyberciti.biz/tips/finding-bash-perl-python-portably-using-env.html)
+* 1: [Loops sample](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_01.html)
+* 2: [Variable assignment and arithmetic](https://tldp.org/LDP/abs/html/ops.html)
+* 3: [Comparison operators](https://tldp.org/LDP/abs/html/comparison-ops.html)
+* 4: [File test operators](https://tldp.org/LDP/abs/html/fto.html)
+* 5: [Make your scripts portable](https://www.cyberciti.biz/tips/finding-bash-perl-python-portably-using-env.html)
 
 </details>
 
 <details>
+
 <summary><b>man or help:</b></summary>
 * env
 * cut
