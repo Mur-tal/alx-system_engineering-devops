@@ -13,4 +13,5 @@ Task Directories | Skillsets
 [8. 0x08. Networking basics #1](./0x08-networking_basics_2) | DevOps Network SysAdmin
 [9. 0x09. Web infrastructure design](./0x09-web_infrastructure_design) | DevOps SysAdmin Web_Infrastructure
 [10. 0x0A. Configuration management](./0x0A-configuration_management) | DevOps SysAdmin Scripting CI/CD
- 
+[]
+[Command line for the win](./command_line_for_the_win) | Bash Scripting 
