@@ -1,0 +1,51 @@
+Hit:1 http://archive.ubuntu.com/ubuntu xenial InRelease
+Get:2 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [99.8 kB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial-backports InRelease [97.4 kB]
+Get:4 http://security.ubuntu.com/ubuntu xenial-security InRelease [99.8 kB]
+Get:5 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [2,560 kB]
+Get:6 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [1,545 kB]
+Get:7 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages [25.0 kB]
+Get:8 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages [2,052 kB]
+Get:9 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages [985 kB]
+Fetched 7,464 kB in 13s (561 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  nginx-common nginx-core
+Suggested packages:
+  fcgiwrap nginx-doc ssl-cert
+The following NEW packages will be installed:
+  nginx nginx-common nginx-core
+0 upgraded, 3 newly installed, 0 to remove and 3 not upgraded.
+Need to get 460 kB of archives.
+After this operation, 1,485 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 nginx-common all 1.10.3-0ubuntu0.16.04.5 [26.9 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 nginx-core amd64 1.10.3-0ubuntu0.16.04.5 [429 kB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 nginx all 1.10.3-0ubuntu0.16.04.5 [3,494 B]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 460 kB in 0s (2,339 kB/s)
+Selecting previously unselected package nginx-common.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56215 files and directories currently installed.)
+Preparing to unpack .../nginx-common_1.10.3-0ubuntu0.16.04.5_all.deb ...
+Unpacking nginx-common (1.10.3-0ubuntu0.16.04.5) ...
+Selecting previously unselected package nginx-core.
+Preparing to unpack .../nginx-core_1.10.3-0ubuntu0.16.04.5_amd64.deb ...
+Unpacking nginx-core (1.10.3-0ubuntu0.16.04.5) ...
+Selecting previously unselected package nginx.
+Preparing to unpack .../nginx_1.10.3-0ubuntu0.16.04.5_all.deb ...
+Unpacking nginx (1.10.3-0ubuntu0.16.04.5) ...
+Processing triggers for systemd (229-4ubuntu21.31) ...
+Setting up nginx-common (1.10.3-0ubuntu0.16.04.5) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+Setting up nginx-core (1.10.3-0ubuntu0.16.04.5) ...
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Setting up nginx (1.10.3-0ubuntu0.16.04.5) ...
+Processing triggers for systemd (229-4ubuntu21.31) ...
+sudo: ufw: command not found
+ * Starting nginx nginx
+   ...done.
