@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# change nginx to lower priv user
+# A Bash script to make Nginx run as nginx user on port 8080
 sudo pkill "apache2"
 sudo chmod 644 /etc/nginx/nginx.conf
 sudo sed -i '1i user nginx;' /etc/nginx/nginx.conf
