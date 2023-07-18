@@ -1,0 +1,117 @@
+Last login: Tue Jul 18 19:05:54 on ttys000
+muris-MacBook-Air:~ malikgbadamosi$ ssh 76b2766d7dd4@76b2766d7dd4.9af640a5.alx-cod.online
+76b2766d7dd4@76b2766d7dd4.9af640a5.alx-cod.online's password: 
+root@76b2766d7dd4:/# ls
+alx-system_engineering-devops  boot  etc   lib    lib64   media  opt   root  sbin  sys  usr
+bin                            dev   home  lib32  libx32  mnt    proc  run   srv   tmp  var
+root@76b2766d7dd4:/# cd alx-system_engineering-devops/
+root@76b2766d7dd4:/alx-system_engineering-devops# ls
+0x00-shell_basics                  0x07-networking_basics          0x0D-web_stack_debugging_0
+0x01-shell_permissions             0x08-networking_basics_2        0x0E-web_stack_debugging_1
+0x02-shell_redirections            0x09-web_infrastructure_design  0x12-web_stack_debugging_2
+0x03-shell_variables_expansions    0x0A-configuration_management   0x13-firewall
+0x04-loops_conditions_and_parsing  0x0B-ssh                        command_line_for_the_win
+0x06-regular_expressions           0x0C-web_server                 README.md
+root@76b2766d7dd4:/alx-system_engineering-devops# cd 0x13-firewall/
+root@76b2766d7dd4:/alx-system_engineering-devops/0x13-firewall# ls
+0-block_all_incoming_traffic_but  README.md
+root@76b2766d7dd4:/alx-system_engineering-devops/0x13-firewall# 
+
+
+
+
+
+
+root@76b2766d7dd4:/alx-system_engineering-devops/0x13-firewall# ssh ubuntu@34.229.189.155
+Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.15.0-1021-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Jul 18 18:19:02 UTC 2023
+
+  System load:  0.0                Processes:             104
+  Usage of /:   12.8% of 19.20GB   Users logged in:       0
+  Memory usage: 29%                IPv4 address for eth0: 10.247.171.238
+  Swap usage:   0%
+
+ * Ubuntu Pro delivers the most comprehensive open source security and
+   compliance features.
+
+   https://ubuntu.com/aws/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+3 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+New release '22.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+*** System restart required ***
+Last login: Tue Jul 18 14:13:20 2023 from 44.204.48.167
+ubuntu@222360-web-01:~$ ls
+alx-system_engineering-devops  sudo
+ubuntu@222360-web-01:~$ 
+ubuntu@222360-web-01:~$ ll /etc/ufw/
+total 56
+drwxr-xr-x  3 root root 4096 Oct 14  2022 ./
+drwxr-xr-x 97 root root 4096 Jul 16 19:28 ../
+-rw-r-----  1 root root  915 Jul 17 22:20 after6.rules
+-rw-r-----  1 root root 1126 Oct 14  2022 after.init
+-rw-r-----  1 root root 1004 Jul 17 22:20 after.rules
+drwxr-xr-x  2 root root 4096 Jun 27 23:48 applications.d/
+-rw-r-----  1 root root 6700 Oct 25  2021 before6.rules
+-rw-r-----  1 root root 1130 Oct 14  2022 before.init
+-rw-r-----  1 root root 2537 Oct 25  2021 before.rules
+-rw-r--r--  1 root root 1391 Jan 21  2020 sysctl.conf
+-rw-r--r--  1 root root  313 Jul 17 22:23 ufw.conf
+-rw-r-----  1 root root 1861 Jul 17 22:23 user6.rules
+-rw-r-----  1 root root 1870 Jul 17 22:23 user.rules
+ubuntu@222360-web-01:~$ sudo vi /etc/ufw/before.rules 
+
+
+
+
+
+
+
+
+-A ufw-before-forward -p icmp --icmp-type echo-request -j ACCEPT
+
+# allow dhcp client to work
+-A ufw-before-input -p udp --sport 67 --dport 68 -j ACCEPT
+
+#
+# ufw-not-local
+#
+-A ufw-before-input -j ufw-not-local
+
+# if LOCAL, RETURN
+-A ufw-not-local -m addrtype --dst-type LOCAL -j RETURN
+
+# if MULTICAST, RETURN
+-A ufw-not-local -m addrtype --dst-type MULTICAST -j RETURN
+
+# if BROADCAST, RETURN
+-A ufw-not-local -m addrtype --dst-type BROADCAST -j RETURN
+
+# all other non-local packets are dropped
+-A ufw-not-local -m limit --limit 3/min --limit-burst 10 -j ufw-logging-deny
+-A ufw-not-local -j DROP
+
+# allow MULTICAST mDNS for service discovery (be sure the MULTICAST line above
+# is uncommented)
+-A ufw-before-input -p udp -d 224.0.0.251 --dport 5353 -j ACCEPT
+
+# allow MULTICAST UPnP for service discovery (be sure the MULTICAST line above
+# is uncommented)
+-A ufw-before-input -p udp -d 239.255.255.250 --dport 1900 -j ACCEPT
+
+# don't delete the 'COMMIT' line or these rules won't be processed
+COMMIT
