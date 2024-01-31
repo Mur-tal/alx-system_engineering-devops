@@ -1,7 +1,0 @@
-# SSH local client configuration with no need for password
-
-Host 222360-web-01
-	Hostname 34.229.189.155
-	User ubuntu
-	PasswordAuthentication no
-	IdentityFile ~/.ssh/school
