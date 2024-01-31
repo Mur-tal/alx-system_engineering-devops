@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# Shorter version of Script to make Nginx installation listen on port 80
-sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
-pkill -1 nginx
